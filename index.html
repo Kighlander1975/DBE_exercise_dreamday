@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamday - Ihre Eventagentur für Ihren schönsten Tag</title>
-    <link rel="stylesheet" href="ressources/css/styles.css">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dreamday - Ihre Eventagentur für Ihren schönsten Tag</title>
+        <link rel="stylesheet" href="ressources/css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="left-side">
+                    <div id="logo">Dreamday Events</div>
+                </div>
+                <div class="right-side">
+                    <ul>
+                        <li><a href="#about_us">Über uns</a></li>
+                        <li><a href="#services">Leistungen</a></li>
+                        <li><a href="#approach">Anfahrt</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="hero">
+                <div id="hero-headline">
+                    <h1>Ihre Träume, perfekt geplant!</h1>
+                    <p>Wir machen jeden Moment unvergesslich.</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="about_us">
+                <div class="section_headline">
+                    <h2>Über uns</h2>
+                </div>
+                <div class="section_container">
+                    <div class="section-row">
+                        <div class="section-text"></div>
+                        <div class="section-image"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="services">
+                <div class="section_headline">
+                    <h2>Unsere Leistungen</h2>
+                </div>
+                <div class="section_container">
+                    <div class="section-row">
+                        <div class="section-text">
+                            <h4>Hochzeitsplanung</h4>
+                        </div>
+                        <div class="section-image">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Reprehenderit ad unde
+                                praesentium illo. Modi dignissimos, vero dolorum
+                                quod labore ad aliquid culpa distinctio totam
+                                pariatur libero fugit saepe temporibus
+                                accusamus, voluptatibus corporis. Exercitationem
+                                cupiditate eligendi blanditiis mollitia
+                                necessitatibus totam reprehenderit porro, at non
+                                quisquam, natus obcaecati minima perferendis
+                                maxime inventore!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section-row">
+                        <div class="section-text">
+                            <h4>Firmenfeiern</h4>
+                        </div>
+                        <div class="section-image">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptatum, aliquid quis,
+                                culpa quos ea corporis nostrum veritatis vitae
+                                pariatur tenetur quo dolores fuga delectus. Rem!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="section-row">
+                        <div class="section-text">
+                            <h4>Private Feiern</h4>
+                        </div>
+                        <div class="section-image">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Saepe nemo porro error qui id
+                                vero, maxime fugiat in consequatur, temporibus
+                                aperiam voluptatum impedit possimus eaque modi
+                                vitae unde adipisci. Nihil placeat reprehenderit
+                                explicabo perferendis ullam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="approach">
+                <div class="section_headline">
+                    <h2>Hier finden Sie uns</h2>
+                </div>
+                <div class="section_container">
+                    <div class="section-row">
+                        <div class="section-single"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="section_headline">
+                    <h2>Kontaktieren Sie uns</h2>
+                </div>
+                <div class="section_container">
+                    <div class="section-row">
+                        <div class="section-text">
+                            <h6>Lassen Sie uns Ihre Träume verwirklichen</h6>
+                            <p>
+                                Wir freuen uns darauf, Ihre Vision kennenzulernen.<br />
+                                <address>
+                                    Musterstraße 123<br />
+                                    12345 Musterstadt<br />
+                                    Tel: 0123 456789
+                                </address>
+                            </p>
+                        </div>
+                        <div class="section-form">
+                            <form action="send.php" method="post">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name" 
+                                        placeholder="Ihr Name"
+                                        required />
+                                </div>
+                                <div>
+                                    <label for="email">E-Mail</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        placeholder="ihre@email.de"
+                                        required />
+                                </div>
+                                <div>
+                                    <label for="message">Nachricht</label>
+                                    <textarea 
+                                        id="message" 
+                                        name="message" 
+                                        placeholder="Ihre Nachricht"
+                                        required
+                                        ></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="left-side">Dreamday Events</div>
+            <div class="right-side">Facebook</div>
+        </footer>
+    </body>
 </html>
