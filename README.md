@@ -15,4 +15,11 @@ Next, I create my completely empty HTML framework, where I simply include the CS
 
 ### HTML structure
 I have a PDF file in which, similar to Figma, the page has been completely designed. Based on this PDF, I create a basic HTML structure that includes all the elements that appear on the page. From the navigation bar, the hero area, the individual sections and articles, to the footer.
+
 If possible, I use ABSOLUTELY no additional CSS up to this point other than what's currently in the base settings.
+
+### Image search
+Now that the HTML framework and content are in place, the styling would come in the form of CSS... No!
+The content isn't finished yet, the images are still missing (and the corresponding &lt;img&gt; tags).
+
+A total of six images are being searched for, one of which is a map section. When searching, care must be taken to use royalty-free images. I'll only cheat a bit with the map section: I'll use the Snipping Tool (Windows key + Shift + S) to cut out a section of a map.
