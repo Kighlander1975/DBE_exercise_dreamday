@@ -1,0 +1,61 @@
+/* *** Base Settings *** */
+:root {
+    /* Font settings */
+    --heading-font: 'Segoe UI bold', Arial, sans-serif;
+    --body-font: 'Segoe UI normal', Arial, sans-serif;
+    --italic-font: 'Segoe UI italic', Arial, sans-serif;
+    --italic-bold-font: 'Segoe UI italic bold', Arial, sans-serif;
+
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.5;
+
+    /* Color settings */
+    --text-light: #fff;
+    --text-dark: #2c2533;
+    --primary-color: #9f7ab0;
+    --secondary-color: #e8d3f2;
+    --darken: #4a4058;
+    --lighten: #faf6fd;
+    --transparent: rgba(15, 15, 15, 0.5);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Typography settings*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: 1rem;
+}
+b, strong {
+    font-family: var(--heading-font);
+}
+i, em {
+    font-family: var(--italic-font);
+}
+strong em, em strong, strong i, i strong,
+b i, i b, b em, em b {
+    font-family: var(--italic-bold-font);
+}
