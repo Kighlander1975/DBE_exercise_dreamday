@@ -23,3 +23,7 @@ Now that the HTML framework and content are in place, the styling would come in 
 The content isn't finished yet, the images are still missing (and the corresponding &lt;img&gt; tags).
 
 A total of six images are being searched for, one of which is a map section. When searching, care must be taken to use royalty-free images. I'll only cheat a bit with the map section: I'll use the Snipping Tool (Windows key + Shift + S) to cut out a section of a map.
+
+### CSS structure
+Here's a step-by-step guide, starting with the menu.
+Since the header also includes the hero section, I combined both into one step and adjusted both the desktop and mobile portrait designs.
