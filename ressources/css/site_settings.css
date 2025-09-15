@@ -1,1 +1,114 @@
 /* *** Site Settings *** */
+
+header {
+    & nav {
+        background-color: var(--text-lighten);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .left-side {
+            margin-left: 2rem;
+            & #logo {
+                color: var(--primary-color);
+                margin: 1.5rem 0;
+            }
+        }
+        & .right-side {
+            & ul {
+                display: flex;
+                margin-right: 2rem;
+                overflow: hidden;
+                & li {
+                    list-style-type: none;
+                    & a {
+                        color: var(--text-darken);
+                        text-decoration: none;
+                        font-weight: bold;
+                        padding: 1rem 0.5rem;
+                        position: relative;
+                        transition: color 0.3s;
+                    }
+                    & a::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--primary-color);
+                        transition: width 0.3s ease;
+                    }
+                    & a:hover {
+                        color: var(--primary-color);
+                    }
+                    & a:hover::after {
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    }
+    & #hero {
+        position: relative;
+        background-image: url("../images/hero.jpg");
+        width: 100%;
+        height: 45vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        & #hero-headline {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            background-color: var(--transparent);
+            color: var(--text-lighten);
+            text-align: center;
+            & h1 {
+                font-family: (--body-font);
+                font-weight: normal;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+/* *** Responsive Einstellungen *** */
+@media (max-width: 700px) {
+    header {
+        & nav {
+            flex-direction: column;
+            justify-content: center;
+            & .left-side {
+                margin: 0;
+            }
+            & .right-side {
+                width: 100%;
+                & ul {
+                    margin: 0;
+                    justify-content: space-between;
+                    & li {
+                        background-color: var(--text-light);
+                        border-radius: 8px;
+                        margin-bottom: 1.5rem;
+                        padding: 0.35rem;
+                        & a {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+        & #hero {
+            & #hero-headline {
+                & h1 {
+                    font-size: 1.2em;
+                    padding: 0.5em;
+                }
+                & p {
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+}

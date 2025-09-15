@@ -15,8 +15,8 @@
     --text-dark: #2c2533;
     --primary-color: #9f7ab0;
     --secondary-color: #e8d3f2;
-    --darken: #4a4058;
-    --lighten: #faf6fd;
+    --text-darken: #4a4058;
+    --text-lighten: #faf6fd;
     --transparent: rgba(15, 15, 15, 0.5);
 }
 * {
