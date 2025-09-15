@@ -2,15 +2,40 @@
 
 header {
     & nav {
-        background-color: var(--text-lighten);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: background-color 0.3s ease;
+
+        /* Basis-Stil für die Navigation */
+        background-color: transparent;
+
+        /* Klassen für JavaScript-Steuerung - mit !important für höhere Priorität */
+        &.transparent {
+            background-color: transparent !important;
+        }
+
+        &.solid {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
+
         & .left-side {
             margin-left: 2rem;
             & #logo {
                 color: var(--primary-color);
                 margin: 1.5rem 0;
+                transition: color 0.3s ease;
+                & h2 {
+                    & a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
             }
         }
         & .right-side {
@@ -53,10 +78,11 @@ header {
         position: relative;
         background-image: url("../images/hero.jpg");
         width: 100%;
-        height: 45vw;
+        height: 80vw;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        padding-top: 70px; /* Standard-Padding for Desktop */
         & #hero-headline {
             position: absolute;
             width: 100%;
@@ -72,6 +98,238 @@ header {
         }
     }
 }
+main {
+    & h3 {
+        text-align: center;
+    }
+    & section {
+        & .section_headline {
+            color: var(--primary-color);
+            padding: 2rem 0;
+        }
+        & .section_container {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1200px;
+
+            /* Standard-Layout für section-text und section-image direkt im section_container */
+            & > .section-text {
+                width: 50%;
+            }
+            & > .section-image {
+                width: 50%;
+            }
+
+            & > .section-text p {
+                margin-left: 25%;
+            }
+
+            & > .section-image img {
+                width: 75%;
+            }
+        }
+    }
+
+    /* Spezifisches Layout für Sektionen mit section-row Elementen */
+    & section#services .section_container,
+    & section#approach .section_container,
+    & section#contact .section_container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        & .section-row {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            margin-bottom: 2rem;
+
+            & .section-text {
+                width: 47.5%;
+            }
+            & .section-image {
+                width: 52.5%;
+            }
+
+            & .section-text {
+                & p {
+                    margin-left: 25%;
+                }
+
+                & h4,
+                & h6 {
+                    margin-left: 25%;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                }
+
+                & address {
+                    margin-left: 50%;
+                    font-style: normal;
+                    margin-top: 1rem;
+                }
+            }
+
+            & .section-image {
+                & img {
+                    width: 75%;
+                }
+            }
+
+            & .section-form {
+                & form {
+                    margin-left: 0;
+                    width: 100%;
+
+                    & div {
+                        margin-bottom: 1rem;
+
+                        & label {
+                            display: block;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        & input,
+                        & textarea {
+                            width: 100%;
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                        }
+
+                        & textarea {
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Nur die mittlere Zeile in #services umkehren */
+    & section#services .section_container .section-row:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    /* Anpassung der Margins für die umgekehrte mittlere Zeile */
+    &
+        section#services
+        .section_container
+        .section-row:nth-child(2)
+        .section-text {
+        & p,
+        & h4 {
+            margin-left: 0;
+            margin-right: 25%;
+        }
+    }
+
+    /* Bild in der mittleren Zeile rechtsbündig ausrichten */
+    &
+        section#services
+        .section_container
+        .section-row:nth-child(2)
+        .section-image {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    & section#about_us,
+    & section#contact {
+        background-color: var(--text-lighten);
+    }
+    & section#about_us {
+        padding-bottom: 2rem;
+    }
+
+    & section#approach {
+        & .section_container {
+            display: flex;
+            width: 60%;
+            margin-bottom: 3rem;
+            & .section-row {
+                gap: 0;
+            }
+        }
+    }
+
+    & section#contact {
+        padding-bottom: 2rem;
+        & .section_container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 60%;
+            & .section-text,
+            & .section-form {
+                width: 50%;
+            }
+            & .section-text {
+                & p {
+                    margin: 0;
+                }
+            }
+            & .section-form {
+                & form {
+                    display: flex;
+                    flex-direction: column;
+                    & div {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 1rem;
+                        & input,
+                        & textarea {
+                            border-radius: 5px;
+                            border: 1px solid var(--text-darken);
+                            line-height: 1.5rem;
+                            font-size: 0.8em;
+                            padding: 0.5em;
+                            font-family: var(--body-font);
+                        }
+                        & textarea {
+                            height: 6rem;
+                            resize: none;
+                            overflow-y: auto;
+                        }
+                        & input[type="submit"] {
+                            border: 1px solid var(--primary-color);
+                            background-color: var(--primary-color);
+                            color: var(--text-lighten);
+                            width: 25%;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        }
+                        & input[type="submit"]:hover {
+                            background-color: var(--text-lighten);
+                            color: var(--primary-color);
+                            box-shadow: 0 0 8px rgba(159, 122, 176, 0.5);
+                            transform: translateY(-2px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--text-darken);
+    color: var(--secondary-color);
+    padding: 1.25rem 0;
+    align-items: center;
+    & .right-side {
+        height: 24px;
+        & img {
+            width: 1.5rem;
+            cursor:pointer;
+        }
+    }
+}
 
 /* *** Responsive Einstellungen *** */
 @media (max-width: 700px) {
@@ -79,8 +337,17 @@ header {
         & nav {
             flex-direction: column;
             justify-content: center;
+            /* Immer undurchsichtig in mobiler Ansicht */
+            background-color: var(--text-lighten) !important;
+
+            /* Wichtig: Überschreibt alle anderen Stile */
+            &.transparent,
+            &.solid {
+                background-color: var(--text-lighten) !important;
+            }
+
             & .left-side {
-                margin: 0;
+                margin-left: 0;
             }
             & .right-side {
                 width: 100%;
@@ -100,6 +367,8 @@ header {
             }
         }
         & #hero {
+            padding: 0;
+            margin-top: 135px;
             & #hero-headline {
                 & h1 {
                     font-size: 1.2em;
@@ -110,5 +379,99 @@ header {
                 }
             }
         }
+    }
+    main {
+        & section {
+            & .section_container {
+                flex-direction: column;
+                gap: 1rem;
+                margin: 0 1rem;
+
+                & > .section-text,
+                & > .section-image {
+                    width: 100%;
+                }
+
+                & > .section-text p {
+                    margin-left: 0;
+                    width: 100%;
+                }
+
+                & > .section-image img {
+                    width: 100%;
+                }
+            }
+        }
+
+        & section#services .section_container,
+        & section#approach .section_container,
+        & section#contact .section_container {
+            & .section-row {
+                flex-direction: column;
+                gap: 1rem;
+
+                & .section-text,
+                & .section-image,
+                & .section-form,
+                & .section-single {
+                    width: 100%;
+                }
+
+                & .section-text {
+                    & p,
+                    & h4,
+                    & h6,
+                    & address {
+                        margin-left: 0;
+                        margin-right: 0;
+                        width: 100%;
+                    }
+                }
+
+                & .section-image img {
+                    width: 100%;
+                }
+            }
+        }
+
+        /* Im responsiven Modus die umgekehrte Reihenfolge für die mittlere Zeile zurücksetzen */
+        & section#services .section_container .section-row:nth-child(2) {
+            flex-direction: column; /* Überschreibt die row-reverse für die mobile Ansicht */
+
+            /* Reihenfolge der Elemente anpassen: Text vor Bild */
+            & .section-text {
+                order: 1; /* Text zuerst anzeigen */
+            }
+
+            & .section-image {
+                order: 2; /* Bild danach anzeigen */
+                justify-content: flex-start;
+            }
+        }
+
+        & section#contact {
+            & .section_container {
+                flex-direction: column;
+                width:90%;
+                & .section-text,
+                & .section-form {
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* Entfernen der Animation und scroll-timeline für bessere Kompatibilität */
+@keyframes change-opacity {
+    0% {
+        --nav-opacity: 0;
+    }
+    1% {
+        --nav-opacity: 0.9;
+    }
+    100% {
+        --nav-opacity: 0.9;
     }
 }

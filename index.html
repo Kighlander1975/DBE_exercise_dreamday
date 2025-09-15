@@ -6,11 +6,13 @@
         <title>Dreamday - Ihre Eventagentur für Ihren schönsten Tag</title>
         <link rel="stylesheet" href="ressources/css/styles.css" />
     </head>
-    <body>
+    <body id="oben">
         <header>
             <nav>
                 <div class="left-side">
-                    <div id="logo"><h2>Dreamday Events</h2></div>
+                    <div id="logo">
+                        <h2><a href="#oben">Dreamday Events</a></h2>
+                    </div>
                 </div>
                 <div class="right-side">
                     <ul>
@@ -31,25 +33,29 @@
         <main>
             <section id="about_us">
                 <div class="section_headline">
-                    <h2>Über uns</h2>
+                    <h3>Über uns</h3>
                 </div>
                 <div class="section_container">
-                    <div class="section-row">
-                        <div class="section-text"></div>
-                        <div class="section-image"></div>
+                    <div class="section-text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Accusamus nostrum ea aperiam tempore quos,
+                            minus corrupti incidunt laborum error dolorum.
+                        </p>
+                    </div>
+                    <div class="section-image">
+                        <img src="ressources/images/about_us.jpg" alt="" />
                     </div>
                 </div>
             </section>
             <section id="services">
                 <div class="section_headline">
-                    <h2>Unsere Leistungen</h2>
+                    <h3>Unsere Leistungen</h3>
                 </div>
                 <div class="section_container">
                     <div class="section-row">
                         <div class="section-text">
                             <h4>Hochzeitsplanung</h4>
-                        </div>
-                        <div class="section-image">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur,
                                 adipisicing elit. Reprehenderit ad unde
@@ -63,12 +69,13 @@
                                 maxime inventore!
                             </p>
                         </div>
+                        <div class="section-image">
+                            <img src="ressources/images/hochzeit.jpg" alt="" />
+                        </div>
                     </div>
                     <div class="section-row">
                         <div class="section-text">
                             <h4>Firmenfeiern</h4>
-                        </div>
-                        <div class="section-image">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Voluptatum, aliquid quis,
@@ -76,12 +83,16 @@
                                 pariatur tenetur quo dolores fuga delectus. Rem!
                             </p>
                         </div>
+                        <div class="section-image">
+                            <img
+                                src="ressources/images/firmenfeier.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                     <div class="section-row">
                         <div class="section-text">
                             <h4>Private Feiern</h4>
-                        </div>
-                        <div class="section-image">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Saepe nemo porro error qui id
@@ -91,74 +102,112 @@
                                 explicabo perferendis ullam.
                             </p>
                         </div>
+                        <div class="section-image">
+                            <img
+                                src="ressources/images/privatfeier.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
             <section id="approach">
                 <div class="section_headline">
-                    <h2>Hier finden Sie uns</h2>
+                    <h3>Hier finden Sie uns</h3>
                 </div>
                 <div class="section_container">
-                    <div class="section-row">
-                        <div class="section-single"></div>
-                    </div>
+                    <img src="ressources/images/contact.jpg" alt="" />
                 </div>
             </section>
             <section id="contact">
                 <div class="section_headline">
-                    <h2>Kontaktieren Sie uns</h2>
+                    <h3>Kontaktieren Sie uns</h3>
                 </div>
                 <div class="section_container">
-                    <div class="section-row">
-                        <div class="section-text">
-                            <h6>Lassen Sie uns Ihre Träume verwirklichen</h6>
-                            <p>
-                                Wir freuen uns darauf, Ihre Vision kennenzulernen.<br />
-                                <address>
-                                    Musterstraße 123<br />
-                                    12345 Musterstadt<br />
-                                    Tel: 0123 456789
-                                </address>
-                            </p>
-                        </div>
-                        <div class="section-form">
-                            <form action="send.php" method="post">
-                                <div>
-                                    <label for="name">Name</label>
-                                    <input 
-                                        type="text" 
-                                        id="name" 
-                                        name="name" 
-                                        placeholder="Ihr Name"
-                                        required />
-                                </div>
-                                <div>
-                                    <label for="email">E-Mail</label>
-                                    <input 
-                                        type="email" 
-                                        id="email" 
-                                        name="email" 
-                                        placeholder="ihre@email.de"
-                                        required />
-                                </div>
-                                <div>
-                                    <label for="message">Nachricht</label>
-                                    <textarea 
-                                        id="message" 
-                                        name="message" 
-                                        placeholder="Ihre Nachricht"
-                                        required
-                                        ></textarea>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="section-text">
+                        <h6>Lassen Sie uns Ihre Träume verwirklichen</h6>
+                        <p>
+                            Wir freuen uns darauf, Ihre Vision kennenzulernen.
+                        </p>
+                        <address>
+                            Musterstraße 123<br />
+                            12345 Musterstadt<br />
+                            Tel: 0123 456789
+                        </address>
+                    </div>
+                    <div class="section-form">
+                        <form action="send.php" method="post">
+                            <div>
+                                <label for="name">Name<sup>*</sup></label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Ihr Name"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label for="email">E-Mail<sup>*</sup></label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="ihre@email.de"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label for="message">Nachricht<sup>*</sup></label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    placeholder="Ihre Nachricht"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div>
+                                <label for="submit" hidden>Absenden</label>
+                                <input type="submit" value="Absenden">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
         </main>
         <footer>
             <div class="left-side">Dreamday Events</div>
-            <div class="right-side">Facebook</div>
+            <div class="right-side">
+                <img src="ressources/images/facebook-app-round-white-icon.webp" alt="Facebook Icon" />
+            </div>
         </footer>
+        <script>
+            function checkScroll() {
+                const nav = document.querySelector("header nav");
+                const isMobile = window.innerWidth <= 700;
+
+                // Mobile: always solid
+                if (isMobile) {
+                    nav.classList.remove("transparent");
+                    nav.classList.remove("solid");
+                    return;
+                }
+
+                // Desktop: transparent at top, solid when scrolled
+                if (window.pageYOffset > 0) {
+                    nav.classList.remove("transparent");
+                    nav.classList.add("solid");
+                } else {
+                    nav.classList.add("transparent");
+                    nav.classList.remove("solid");
+                }
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            window.addEventListener("resize", checkScroll);
+            document.addEventListener("DOMContentLoaded", checkScroll);
+            window.addEventListener("load", checkScroll);
+            checkScroll();
+        </script>
     </body>
 </html>

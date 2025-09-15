@@ -18,11 +18,25 @@
     --text-darken: #4a4058;
     --text-lighten: #faf6fd;
     --transparent: rgba(15, 15, 15, 0.5);
+
+    /* Sticky Navigation Bar */
+    --nav-opacity: 0;
+    --nav-background: rgba(255, 255, 255, var(--nav-opacity));
+    scroll-timeline: --scroll-timeline block;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: auto;
 }
 /* Typography settings*/
 
